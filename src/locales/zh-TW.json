@@ -1,1 +1,19 @@
-zh-TW.json
+// src/i18n.js
+import Vue from 'vue';
+import VueI18n from 'vue-i18n';
+import zhCN from './locales/zh-CN.json';
+import zhTW from './locales/zh-TW.json';
+
+Vue.use(VueI18n);
+
+const messages = {
+  'zh-CN': zhCN,
+  'zh-TW': zhTW,
+};
+
+const i18n = new VueI18n({
+  locale: 'zh-CN', // 預設語言
+  messages,
+});
+
+export default i18n;
